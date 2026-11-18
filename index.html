@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module Studio</title>
     <style>
+        a { color: #1d4d77; overflow-wrap: anywhere; }
+        a:focus-visible { outline: 3px solid #d88b00; outline-offset: 4px; }
         body {
+            overflow-wrap: anywhere;
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
             color: #333;
             line-height: 1.6;
@@ -63,6 +66,11 @@
             color: #777;
             font-size: 0.9rem;
         }
+        @media (max-width: 480px) {
+            header h1 { font-size: clamp(1.75rem, 8vw, 2.5rem); }
+            .container { margin: 1rem; padding: 1.25rem; }
+            .info-list li strong { display: block; width: auto; }
+        }
     </style>
 </head>
 <body>
@@ -80,8 +88,7 @@
     <ul class="info-list">
         <li><strong>屋号</strong>Module Studio</li>
         <li><strong>事業内容</strong>スマートフォン向けアプリケーション（パズルゲーム・数独など）の企画・開発・運用</li>
-        <li><strong>所在地</strong>〒107-0062 東京都港区南青山（※DMMの正確な住所が確定したら書き換えること！）</li>
-        <li><strong>お問い合わせ</strong>info@modulestudio.jp</li>
+        <li><strong>お問い合わせ</strong><a href="mailto:info@modulestudio.jp">info@modulestudio.jp</a></li>
     </ul>
 
     <h2>Contact</h2>
@@ -89,6 +96,7 @@
 </div>
 
 <footer>
+    <p><a href="/privacy/">プライバシーポリシー</a></p>
     &copy; 2026 Module Studio. All rights reserved.
 </footer>
 
